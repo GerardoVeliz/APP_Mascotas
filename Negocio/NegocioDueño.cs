@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    class NegocioDueño
+    public class NegocioDueño
     {
         public long RegitrarDueño(Dueño dueño) {
 
@@ -33,6 +33,33 @@ namespace Negocio
 
                     throw ex;
                 }
+        
+        
+        }
+
+        public void modificarDueño(Dueño nuevo) {
+
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+
+                datos.SetearQuery("update dueño set nombre=@nombre , apellido=@apellido , telefono = @telefono , mail=@mail, direccion=@direccion where idDueño=@idDueño" );
+                datos.setearParametros("@nombre", nuevo.nombre);
+                datos.setearParametros("@apellido", nuevo.apellido);
+                datos.setearParametros("@telefono", nuevo.telefono);
+                datos.setearParametros("@mail", nuevo.mail);
+                datos.setearParametros("@direccion", nuevo.direccion);
+                datos.setearParametros("@idDueño", nuevo.id);
+
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         
         
         }

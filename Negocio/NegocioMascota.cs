@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    class NegocioMascota
+    public class NegocioMascota
     {
 
         public void RegistrarMascota( Mascota mascota, int idDueño ) {
@@ -42,5 +42,33 @@ namespace Negocio
             }
         
         }
+
+        public void modificarMascota(Mascota nueva) {
+
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearQuery("update mascota set nombre=@nombre, raza=@raza,fechaNacimiento=@fechaNacimiento, fotoUrl=@fotoUrl where idMascota = @idMascota ");
+                datos.setearParametros("@nombre", nueva.nombre);
+                datos.setearParametros("@raza",nueva.raza);
+                datos.setearParametros("@fechaNacimiento",nueva.fechaNacimiento);
+                datos.setearParametros("@fotoUrl",nueva.urlImagen);
+
+                datos.ejecutarAccion();
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        
+        
+        }
+
     }
 }
