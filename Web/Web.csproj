@@ -67,11 +67,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MostrarMascota.aspx" />
+    <Content Include="RegistrarMascota.aspx" />
+    <Content Include="RegistrarUsuario.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MostrarMascota.aspx.cs">
+      <DependentUpon>MostrarMascota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostrarMascota.aspx.designer.cs">
+      <DependentUpon>MostrarMascota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarMascota.aspx.cs">
+      <DependentUpon>RegistrarMascota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarMascota.aspx.designer.cs">
+      <DependentUpon>RegistrarMascota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarUsuario.aspx.cs">
+      <DependentUpon>RegistrarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarUsuario.aspx.designer.cs">
+      <DependentUpon>RegistrarUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <h1>Binevenido a el login: </h1> 
+    <h1>Bienvenido a el login: </h1> 
 
     <form id="form1" runat="server">
     <asp:Label ID="Label1" runat="server" Text="Ingrese nombre de usuario: "></asp:Label>

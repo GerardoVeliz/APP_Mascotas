@@ -9,18 +9,23 @@ namespace Negocio
 {
     public class NegocioUsuario
     {
-        public void AltaUsuario(Usuario nuevo)
+        public int AltaUsuario(Usuario nuevo)
         {
 
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.SetearQuery("insert into usuario (nombre,contraseña,estado) values (@nombre,@contraseña,@estado)");
-                datos.setearParametros("@nombre", nuevo.nombre);
+                datos.SetearQuery(
+                            "INSERT INTO usuario (nombre, contraseña, estado) " +
+                            "VALUES (@nombre, @contraseña, @estado); " +
+                            "SELECT SCOPE_IDENTITY();"
+                        ); datos.setearParametros("@nombre", nuevo.nombre);
                 datos.setearParametros("@contraseña", nuevo.contraseña);
                 datos.setearParametros("@estado", 1);
-                datos.ejecutarAccion();
+                int idusuario = Convert.ToInt32(datos.ejecutarScalar());
+
+                return idusuario;
             }
             catch (Exception ex)
             {
@@ -93,6 +98,28 @@ namespace Negocio
             }
         }
 
+        public bool ComprobarNombreUsuario (Usuario usuario)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.SetearQuery("SELECT COUNT(*) FROM usuario WHERE nombre = @nombre ");
+                datos.setearParametros("@nombre", usuario.nombre);
+               
+
+                int resultado = Convert.ToInt32(datos.ejecutarScalar());
+                return resultado > 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
 
 
 

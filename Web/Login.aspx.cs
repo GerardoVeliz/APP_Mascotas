@@ -52,6 +52,7 @@ namespace Web
                     lblMensaje.Text = "Inicio de sesión exitoso. ¡Bienvenido!";
                     Session["IntentosFallidos"] = 0; // Reinicia los intentos fallidos
                                                      // Redirige al usuario o carga otra página aquí
+                    Response.Redirect("RegistrarMascota.aspx");
                 }
                 else
                 {
