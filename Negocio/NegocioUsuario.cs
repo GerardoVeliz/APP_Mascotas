@@ -121,6 +121,47 @@ namespace Negocio
             }
         }
 
+        public Usuario ObtenerUsuarioPorNombre(string nombreUsuario)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            Usuario usuario = null;
+
+            try
+            {
+                // Consulta SQL para obtener el usuario por nombre
+                datos.SetearQuery("SELECT idUsuario, nombre, contraseña, estado FROM Usuario WHERE nombre = @nombreUsuario");
+
+                // Parámetro para evitar inyección SQL
+                datos.Comando.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+
+                // Ejecutar lectura
+                datos.EjecutarLectura();
+
+                // Si encuentra un resultado, crea el objeto Usuario
+                if (datos.lector.Read())
+                {
+                    usuario = new Usuario
+                    {
+                        id = (int)datos.lector["idUsuario"],
+                        nombre = (string)datos.lector["nombre"],
+                        contraseña = (string)datos.lector["contraseña"],
+                        Estado = (bool)datos.lector["estado"]
+                    };
+                }
+
+                return usuario; // Retorna el usuario encontrado o null si no hay resultados
+            }
+            catch (Exception ex)
+            {
+                throw ex; // Maneja la excepción según sea necesario
+            }
+            finally
+            {
+                datos.CerrarConexion(); // Asegúrate de cerrar la conexión
+            }
+        }
+
+
 
 
     }

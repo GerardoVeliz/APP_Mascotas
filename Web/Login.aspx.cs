@@ -33,7 +33,6 @@ namespace Web
                 if (intentosFallidos >= 3)
                 {
                     lblMensaje.Text = "Usuario bloqueado por demasiados intentos fallidos.";
-                    //se puede agregar el de dar baja pero tendria que buscar por nombre de usuario 
                     return;
                 }
 
@@ -50,9 +49,18 @@ namespace Web
                 {
                     lblMensaje.ForeColor = System.Drawing.Color.Green;
                     lblMensaje.Text = "Inicio de sesión exitoso. ¡Bienvenido!";
-                    Session["IntentosFallidos"] = 0; // Reinicia los intentos fallidos
-                                                     // Redirige al usuario o carga otra página aquí
-                    Response.Redirect("RegistrarMascota.aspx");
+
+                    // Reinicia los intentos fallidos
+                    Session["IntentosFallidos"] = 0;
+
+                    // Obtén los datos completos del usuario desde la base de datos
+                    Usuario usuarioCompleto = dueño.ObtenerUsuarioPorNombre(user.nombre);
+
+                    // Guarda el usuario en la sesión
+                    Session["Usuario"] = usuarioCompleto;
+
+                    // Redirige al usuario a la página principal
+                    Response.Redirect("index.aspx");
                 }
                 else
                 {
@@ -71,6 +79,7 @@ namespace Web
                 lblMensaje.Text = "Error: " + ex.Message;
             }
         }
+
 
 
     }

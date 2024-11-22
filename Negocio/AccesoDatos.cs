@@ -26,8 +26,8 @@ namespace Negocio
         {
             //PAQUETE DE NUGET: update-package microsoft.codedom.providers.dotnetcompilerplatform -r
           
-            //Conexion = new SqlConnection("server=LAPTOP-OTJVIM30\\SQLEXPRESS; database=app_Mascotas; integrated security=true; Max Pool Size=100;");
-            Conexion = new SqlConnection("server=DESKTOP-LRPR1H0; database=app_Mascotas; integrated security=true; Max Pool Size=100;");
+            Conexion = new SqlConnection("server=LAPTOP-OTJVIM30\\SQLEXPRESS; database=app_Mascotas; integrated security=true; Max Pool Size=100;");
+            //Conexion = new SqlConnection("server=DESKTOP-LRPR1H0; database=app_Mascotas; integrated security=true; Max Pool Size=100;"); LUCA
 
 
 

@@ -1,0 +1,26 @@
+﻿.body-menu {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-container {
+    margin-top: 50px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-item .btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+    .menu-item .btn:hover {
+        background-color: #0056b3;
+    }

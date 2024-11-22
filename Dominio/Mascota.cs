@@ -8,6 +8,7 @@ namespace Dominio
 {
      public class Mascota
     {
+      public int idMascota {  get; set; }
       public   string nombre { get; set; }
       public   string raza { get; set; }
       public   DateTime fechaNacimiento { get; set; }

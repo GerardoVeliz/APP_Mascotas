@@ -10,3 +10,9 @@ C:\Users\Nazuti\Desktop\Programacion\Lab 4\MASCOTAS\APP_Mascotas\Dominio\obj\Deb
 C:\Users\Nazuti\Desktop\Programacion\Lab 4\MASCOTAS\APP_Mascotas\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Nazuti\Desktop\Programacion\Lab 4\MASCOTAS\APP_Mascotas\Dominio\obj\Debug\Dominio.dll
 C:\Users\Nazuti\Desktop\Programacion\Lab 4\MASCOTAS\APP_Mascotas\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Dominio\bin\Debug\Dominio.dll
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Dominio\obj\Debug\Dominio.dll
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Dominio\obj\Debug\Dominio.pdb

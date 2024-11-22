@@ -16,3 +16,12 @@ C:\Users\Nazuti\Desktop\Programacion\Lab 4\MASCOTAS\APP_Mascotas\Negocio\obj\Deb
 C:\Users\Nazuti\Desktop\Programacion\Lab 4\MASCOTAS\APP_Mascotas\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\Nazuti\Desktop\Programacion\Lab 4\MASCOTAS\APP_Mascotas\Negocio\obj\Debug\Negocio.dll
 C:\Users\Nazuti\Desktop\Programacion\Lab 4\MASCOTAS\APP_Mascotas\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Negocio\bin\Debug\Negocio.dll
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Negocio\bin\Debug\Dominio.dll
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Negocio\obj\Debug\Negocio.dll
+C:\Users\Nazuti\Desktop\Programacion\Lab 4\appmascotas\APP_Mascotas\Negocio\obj\Debug\Negocio.pdb
