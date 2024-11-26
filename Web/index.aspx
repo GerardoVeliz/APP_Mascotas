@@ -17,7 +17,7 @@
                     <a href="RegistrarMascota.aspx" class="btn">Registrar Mascota</a>
                 </div>
                 <div class="col-md-4 menu-item mb-3">
-                    <a href="#" class="btn">Mis Datos</a>
+                    <a href="RegistrarDueño.aspx" class="btn">Mis Datos</a>
                 </div>
                 <div class="col-md-4 menu-item mb-3">
                     <a href="MostrarMascota.aspx" class="btn">Ver Mis Mascotas</a>

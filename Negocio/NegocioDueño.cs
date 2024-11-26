@@ -9,12 +9,14 @@ namespace Negocio
 {
     public class NegocioDueño
     {
-        public long RegitrarDueño(Dueño dueño) {
+        public long RegistrarDueño(Dueño dueño) {
 
             using (AccesoDatos datos = new AccesoDatos())
                 try
                 {
-                    datos.SetearQuery("insert into dueño (nombre,apellido,telefono,mail,direccion,estado) values (@nombre,@apellido,@telefono,@mail,@direccion,@estado)"); 
+                    datos.SetearQuery("insert into dueño(idUsuario, nombre, apellido, telefono, mail, direccion, estado) values(@idUsuario, @nombre, @apellido, @telefono, @mail, @direccion, @estado);SELECT SCOPE_IDENTITY();");
+
+                    datos.setearParametros("@idUsuario", dueño.idUsuario);
                     datos.setearParametros("@nombre",dueño.nombre);
                     datos.setearParametros("@apellido", dueño.apellido);
                     datos.setearParametros("@telefono",dueño.telefono);
@@ -22,11 +24,11 @@ namespace Negocio
                     datos.setearParametros("@direccion",dueño.direccion);
                     datos.setearParametros("@estado",1);
 
-                    long idUsuario = Convert.ToInt64(datos.ejecutarScalar());
+                    long idDueño = Convert.ToInt64(datos.ejecutarScalar());
 
 
 
-                    return idUsuario;
+                    return idDueño;
                 }
                 catch (Exception ex)
                 {

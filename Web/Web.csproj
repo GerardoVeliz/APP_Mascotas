@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MostrarMascota.aspx" />
+    <Content Include="RegistrarDueño.aspx" />
     <Content Include="RegistrarMascota.aspx" />
     <Content Include="RegistrarUsuario.aspx" />
     <Content Include="index.aspx" />
@@ -80,6 +81,13 @@
     </Compile>
     <Compile Include="MostrarMascota.aspx.designer.cs">
       <DependentUpon>MostrarMascota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarDueño.aspx.cs">
+      <DependentUpon>RegistrarDueño.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarDueño.aspx.designer.cs">
+      <DependentUpon>RegistrarDueño.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistrarMascota.aspx.cs">
       <DependentUpon>RegistrarMascota.aspx</DependentUpon>
