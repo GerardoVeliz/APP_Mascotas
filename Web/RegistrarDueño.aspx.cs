@@ -16,6 +16,11 @@ namespace Web
 
         }
 
+        protected void btnClose_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("index.aspx");
+        }
+
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
 
@@ -29,7 +34,7 @@ namespace Web
                 nuevo.nombre = txtbNombre.Text;
                 nuevo.apellido = txtApellido.Text;
                 nuevo.direccion = txtbDireccion.Text;
-                nuevo.telefono = Convert.ToInt32(txtbTelefono.Text);
+                nuevo.telefono = Convert.ToInt64(txtbTelefono.Text);
                 nuevo.mail = txtbMail.Text;
                 nuevo.estado = true;
 

@@ -17,7 +17,7 @@ idDueño int primary key not null identity (1,1),
 idUsuario int not null,
 nombre nvarchar(50) not null,
 apellido nvarchar (50) not null,
-telefono int not null, 
+telefono bigint not null, 
 mail nvarchar (50), 
 direccion nvarchar(50) not null,
 estado bit not null 
