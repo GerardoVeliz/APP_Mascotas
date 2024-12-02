@@ -17,6 +17,10 @@ namespace Web
 
         }
 
+        protected void btnClose_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("index.aspx");
+        }
         protected void calFechaNacimiento_SelectionChanged(object sender, EventArgs e)
         {
             txtFechaNacimiento.Text = calFechaNacimiento.SelectedDate.ToString("yyyy-MM-dd");

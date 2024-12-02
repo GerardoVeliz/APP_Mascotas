@@ -16,6 +16,7 @@
             <div class="col-md-6">
                 <h1 class="text-center mb-4">Registrar Mascota</h1>
                 <form id="form1" runat="server" class="border p-4 shadow-sm rounded bg-light">
+                    <asp:Button ID="btnClose" runat="server" Text=" " CssClass="btn-close mt-3" OnClick="btnClose_Click" />
                     <div class="mb-3">
                         <asp:Label ID="Label1" runat="server" Text="Nombre:" AssociatedControlID="txtNombre" class="form-label"></asp:Label>
                         <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
