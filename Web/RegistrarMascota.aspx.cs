@@ -14,6 +14,26 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["Usuario"] == null)
+                {
+                    Response.Redirect("Login.aspx");
+                    return;
+                }
+
+                Usuario usuario = (Usuario)Session["Usuario"];
+                NegocioDueño negocio = new NegocioDueño();
+                if (negocio.DueñoRegistrado(usuario.id) == false)
+                {
+                    btnVolver.Visible = true;
+                    PanelFormulario.Visible = false;
+                    lblDueñoNoRegistrado.Text = "Completa tus datos, para poder agregar una mascota.";
+                    lblDueñoNoRegistrado.ForeColor = System.Drawing.Color.Red;
+
+                }
+            }
+
 
         }
 
@@ -74,6 +94,12 @@ namespace Web
             }
         }
 
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("index.aspx");
+            
+        }
 
+ 
     }
 }

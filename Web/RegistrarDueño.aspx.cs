@@ -17,7 +17,7 @@ namespace Web
             {
                 if (Session["Usuario"] == null)
                 {
-                    Response.Redirect("login.aspx");
+                    Response.Redirect("Login.aspx");
                     return;
                 }
 

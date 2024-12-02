@@ -6,14 +6,19 @@
 <head runat="server">
     <title>Registrar Mascota</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <div class="container mt-5">
         <div class="row justify-content-center">
-            <div class="col-md-6">
+           <form id="formVolver" runat="server">
+                <asp:Label ID="lblDueñoNoRegistrado" runat="server" Text="" CssClass="text-danger"></asp:Label> <br />
+                <asp:Button ID="btnVolver" runat="server" Text="Volver" CssClass="btn btn-secondary mt-3" Visible="false" OnClick="btnVolver_Click" />
+
+    
+</form>
+            <asp:Panel ID="PanelFormulario" runat="server" CssClass="col-md-6">
                 <h1 class="text-center mb-4">Registrar Mascota</h1>
                 <form id="form1" runat="server" class="border p-4 shadow-sm rounded bg-light">
                     <asp:Button ID="btnClose" runat="server" Text=" " CssClass="btn-close mt-3" OnClick="btnClose_Click" />
@@ -41,7 +46,7 @@
                         <asp:Button ID="btnSubir" Text="Registrar Mascota" runat="server" CssClass="btn btn-primary mt-3" OnClick="btnSubir_Click" />
                     </div>
                 </form>
-            </div>
+            </asp:Panel>
         </div>
     </div>
 </body>
