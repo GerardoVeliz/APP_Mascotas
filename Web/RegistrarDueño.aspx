@@ -9,6 +9,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="lblRegistrado" runat="server" Text=""></asp:Label>
+            <asp:Panel ID="panelFormulario" runat="server">
             <h1>Mis datos:  </h1> <br />   <br />  
             <asp:Label ID="Label1" runat="server" Text="Ingrese nombre: "></asp:Label> <br />
             <asp:TextBox ID="txtbNombre" runat="server"></asp:TextBox><br />
@@ -25,7 +27,7 @@
 
             <asp:Label ID="lblmsj" runat="server" Text=""></asp:Label>
             <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />
-
+                </asp:Panel>
         </div>
     </form>
 </body>

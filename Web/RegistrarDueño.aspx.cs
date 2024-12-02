@@ -13,6 +13,26 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["Usuario"] == null)
+                {
+                    Response.Redirect("login.aspx");
+                    return;
+                }
+
+                Usuario usuario = (Usuario)Session["Usuario"];
+                NegocioDueño negocio = new NegocioDueño();
+                if (negocio.DueñoRegistrado(usuario.id))
+                {
+                    panelFormulario.Visible = false;
+                    lblRegistrado.Text = "Este usuario ya tiene un dueño registrado.";
+                    lblRegistrado.ForeColor= System.Drawing.Color.Red;
+                    ScriptManager.RegisterStartupScript(this, GetType(), "redirect",
+                        "setTimeout(function() { window.location = 'index.aspx'; }, 3000);", true);
+                }
+            }
+
 
         }
 
