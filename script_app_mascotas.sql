@@ -14,10 +14,10 @@ estado bit not null
 );
 create table dueño (
 idDueño int primary key not null identity (1,1), 
-idUsuario int not null,
+idUsuario int unique not null,
 nombre nvarchar(50) not null,
 apellido nvarchar (50) not null,
-telefono bigint not null, 
+telefono int not null, 
 mail nvarchar (50), 
 direccion nvarchar(50) not null,
 estado bit not null 
@@ -39,7 +39,7 @@ idDueño int not null,
 foreign key (idDueño) references dueño (idDueño)
 );
 
-
+select * from dueño where idUsuario = @idUsuario
 create table QR_paginas (
     qrId NVARCHAR(50) PRIMARY KEY,
     urlQr NVARCHAR(255),
@@ -47,6 +47,9 @@ create table QR_paginas (
 );
 insert into usuario (nombre,contraseña,estado) values ('admin','admin',1)
 insert into dueño (idUsuario, nombre,apellido, telefono,mail,direccion,estado) values 
-(1,'Gerardo','Veliz',1124090490,'gera.vz@gmail.com','av juan domingo peron 4303',1)
+(1,'Gerardoa','Veliz',1124090490,'gera.vz@gmail.com','av juan domingo peron 4303',1)
+delete  from dueño
 select * from dueño
+delete from dueño 
 select * from mascota
+delete from mascota 
