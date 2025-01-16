@@ -54,11 +54,11 @@ namespace Web
                 nuevo.nombre = txtbNombre.Text;
                 nuevo.apellido = txtApellido.Text;
                 nuevo.direccion = txtbDireccion.Text;
-                nuevo.telefono = Convert.ToInt64(txtbTelefono.Text);
+                nuevo.telefono = Convert.ToInt32(txtbTelefono.Text);
                 nuevo.mail = txtbMail.Text;
                 nuevo.estado = true;
-
-                long resultado = negocio.RegistrarDueño(nuevo);
+                NegocioDueño negocio1 = new NegocioDueño();
+                long resultado =negocio1.RegistrarDueño(nuevo);
 
                 if (resultado > 0)
                 {

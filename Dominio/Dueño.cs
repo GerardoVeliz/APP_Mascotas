@@ -12,7 +12,7 @@ namespace Dominio
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string direccion { get; set; }
-        public long telefono { get; set; }
+        public int telefono { get; set; }
         public string mail { get; set; }
         public bool estado { get; set; }
         public int idUsuario { get; set; }
